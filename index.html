@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cutesy Photobooth</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="photobooth">
+    <h1>📸 Cutesy Photobooth</h1>
+    <video id="camera" autoplay></video>
+    <button id="snap">Take Photo</button>
+    
+    <div class="preview-strip" id="preview-strip"></div>
+
+    <h2>Choose Your Photo Strip Style</h2>
+    <div class="layout-options">
+      <button data-layout="vertical">Vertical Strip</button>
+      <button data-layout="grid">2x2 Grid</button>
+      <button data-layout="horizontal">Horizontal Strip</button>
+    </div>
+
+    <button id="download">Download Photo Strip</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
