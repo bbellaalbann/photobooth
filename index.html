@@ -2,27 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cutesy Photobooth</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Bella's Photobooth</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="photobooth">
-    <h1>📸 Cutesy Photobooth</h1>
-    <video id="camera" autoplay></video>
-    <button id="snap">Take Photo</button>
-    
-    <div class="preview-strip" id="preview-strip"></div>
-
-    <h2>Choose Your Photo Strip Style</h2>
-    <div class="layout-options">
-      <button data-layout="vertical">Vertical Strip</button>
-      <button data-layout="grid">2x2 Grid</button>
-      <button data-layout="horizontal">Horizontal Strip</button>
-    </div>
-
-    <button id="download">Download Photo Strip</button>
+  <div id="intro-screen">
+    <img src="photobooth.png" alt="photo booth" />
+    <button id="start-button">click to start!</button>
   </div>
 
+  <div class="photobooth">
+    <div id="countdown"></div>
+
+    <video id="camera" autoplay></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="camera-select" class="control-label">Camera:</label>
+        <select id="camera-select" class="control-select"></select>
+        <label for="filter-select" class="control-label">Filter:</label>
+        <select id="filter-select" class="control-select">
+          <option value="none">None</option>
+          <option value="grayscale(100%)">Grayscale</option>
+          <option value="sepia(100%)">Sepia</option>
+        </select>
+      </div>
+
+      <button id="snap">snap pic</button>
+    </div>
+
+    <div class="preview-strip" id="preview-strip"></div>
+
+    <div class="layout-options">
+      <button data-layout="vertical">vertical</button>
+      <button data-layout="grid">2x2 grid</button>
+      <button data-layout="horizontal">horizontal</button>
+      <button id="download">download</button>
+    </div>
+  </div>
+
+  <audio id="shutter" src="shutter.mp3" preload="auto"></audio>
   <script src="script.js"></script>
 </body>
 </html>
