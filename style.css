@@ -1,0 +1,126 @@
+body {
+  padding-top: 40px;
+  font-family: "Bitcount Single", system-ui;
+  background-image: url('poopy.png');
+  background-repeat: no-repeat;
+  background-size: center cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  background-color: #ae904c;
+  color: #725324;
+  margin: 0;
+  padding: 0;
+}
+
+.photobooth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: auto;
+}
+
+video {
+  width: 55%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 320px;
+  margin-bottom: 10px;
+  border: 2px solid #806431;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.preview-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.preview-strip img {
+  margin: 5px;
+  border: 1px solid #806431;
+  border-radius: 10px;
+  width: 150px;
+  height: auto;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.photo-preview:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button {
+  font-family: "Bitcount Single", system-ui;
+  background-color: #806431;
+  color: #f1ede6;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+button:hover {
+  background-color: #b1ada9;
+}
+
+#countdown {
+  font-size: 3rem;
+  color: #725324;
+  font-weight: bold;
+  height: 5px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #faf0d9;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+#intro-screen img {
+  max-width: 60%;
+  max-height: 60vh;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+#start-button {
+  font-family: "Bitcount Single", system-ui;
+  font-size: 1.5rem;
+  padding: 12px 24px;
+  background-color: #faf0d9;
+  color: rgb(43, 42, 42);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  background-color: #7a7466;
+}
+
+#download { 
+  background-color: #faf0d9;
+  color: #725324; 
+}
