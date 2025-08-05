@@ -1,6 +1,6 @@
 body {
   padding-top: 40px;
-  font-family: "Bitcount Single", system-ui;
+  font-family: "Caprasimo", serif;
   background-image: url('poopy.png');
   background-repeat: no-repeat;
   background-size: center cover;
@@ -11,6 +11,12 @@ body {
   color: #725324;
   margin: 0;
   padding: 0;
+}
+
+.caprasimo-regular {
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .photobooth {
@@ -123,4 +129,5 @@ button:hover {
 #download { 
   background-color: #faf0d9;
   color: #725324; 
+
 }
